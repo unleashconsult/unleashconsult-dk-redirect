@@ -127,3 +127,6 @@ section, #contact { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 4.5r
 body{margin:0} img{max-width:100%}
 .top ul a[aria-current="page"] { color: var(--accent-ink); }
 .more { font-family: var(--display); font-weight: 500; }
+.svc .price { font-size: .95rem; padding-top: .7rem; border-top: 1px dashed var(--line); }
+.svc .price b { font-weight: 600; color: var(--ink); }
+.svc .price span { color: var(--muted); font-size: .85rem; }
