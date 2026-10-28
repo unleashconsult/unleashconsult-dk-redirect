@@ -6,153 +6,26 @@
 <title>Unleash Consult</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="canonical" href="https://unleashconsult.dk/">
-<meta name="description" content="Frans Lykke Østergård, freelance Senior IT Project Manager. E-commerce platforms, ERP and system integrations. Governance, delivery and vendor management.">
+<meta name="description" content="Frans Lykke Østergård, freelance Senior IT Project Manager. E-commerce platforms, ERP and system integrations. Project management, training and coaching.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap">
-<style>
-/* Layout: one calm column; a dated ledger of engagements is the page's spine */
-:root {
-  --bg: #f6f8f9;
-  --surface: #ffffff;
-  --ink: #0f2a3a;
-  --logo-ink: #023a51;
-  --brand-green: #2cbc63;
-  --muted: #536877;
-  --line: #d9e1e6;
-  --accent: #2cbc63;
-  --accent-ink: #1b7d43;
-  --display: "Sora", "Segoe UI", system-ui, sans-serif;
-  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1a22; --surface: #15232d; --ink: #e6edf1; --muted: #9db0bc;
-    --line: #26394a; --accent: #2cbc63; --accent-ink: #6fd69a; --logo-ink: #e6edf1; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0f1a22; --surface: #15232d; --ink: #e6edf1; --muted: #9db0bc;
-  --line: #26394a; --accent: #2cbc63; --accent-ink: #6fd69a; --logo-ink: #e6edf1; color-scheme: dark;
-}
-* { box-sizing: border-box; }
-body {
-  background: var(--bg); color: var(--ink);
-  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
-}
-.wrap {
-  max-width: 46rem; margin: 0 auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 3.5rem 4rem;
-  display: grid; gap: 3.5rem;
-}
-h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; }
-p { margin: 0; }
-a { color: var(--accent-ink); text-underline-offset: 3px; }
-a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
-
-.logo { width: 170px; height: auto; display: block; overflow: visible; }
-.lg-ink { fill: var(--logo-ink); }
-.lg-green { fill: var(--brand-green); }
-.lg-txt { font-family: "Neue Haas Grotesk Display Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; font-size: 100.92px; }
-
-header { display: grid; gap: 1.25rem; }
-header h1 { font-size: clamp(2rem, 6vw, 2.9rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.1; }
-.id { display: flex; align-items: center; gap: 1.5rem; }
-.name { display: grid; gap: .6rem; min-width: 0; }
-.photo { width: 132px; height: 132px; flex: none; border-radius: 50%; object-fit: cover; background: #fff; box-shadow: 0 0 0 4px var(--surface), 0 0 0 5px var(--line); }
-.role { font-family: var(--display); font-weight: 500; font-size: 1.15rem; color: var(--accent-ink); }
-.lede { display: grid; gap: .9rem; max-width: 62ch; }
-.lede p + p { color: var(--muted); }
-.where { font-size: .95rem; color: var(--muted); }
-
-.label { font-family: var(--display); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
-
-.skills { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; margin: 0; list-style: none; }
-.skills li { border: 1px solid var(--line); background: var(--surface); padding: .35rem .8rem; border-radius: 999px; font-size: .95rem; }
-
-.svc { list-style: none; margin: 0; padding: 0; display: grid; }
-.svc > li { display: grid; grid-template-columns: 13rem 1fr; gap: 1.5rem; padding-block: 1.6rem; border-top: 1px solid var(--line); }
-.svc > li:last-child { border-bottom: 1px solid var(--line); }
-.svc h2 { font-size: 1.3rem; font-weight: 600; line-height: 1.25; }
-.svc-body { display: grid; gap: .8rem; min-width: 0; }
-.svc .tags { font-size: .92rem; font-weight: 600; color: var(--muted); }
-
-.ledger { list-style: none; margin: 0; padding: 0; display: grid; }
-.ledger > li { display: grid; grid-template-columns: 7.5rem 1fr; gap: 1.25rem; padding-block: 1.4rem; border-top: 1px solid var(--line); }
-.ledger > li:last-child { border-bottom: 1px solid var(--line); }
-.when { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .9rem; padding-top: .2rem; }
-.job { display: grid; gap: .5rem; min-width: 0; }
-.job h3 { font-size: 1.1rem; font-weight: 600; }
-.job h3 span { color: var(--muted); font-weight: 500; }
-.job p { color: var(--muted); }
-.job ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .25rem; }
-
-.earlier { display: grid; gap: .4rem; color: var(--muted); }
-.earlier b { color: var(--ink); font-weight: 600; }
-
-.two { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.two ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
-.two li span { display: block; color: var(--muted); font-size: .9rem; }
-
-.contact { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 1.75rem; display: grid; gap: 1rem; }
-.contact h2 { font-size: 1.4rem; font-weight: 600; }
-.rows { display: grid; gap: .6rem; }
-.row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
-.row .k { width: 5.5rem; color: var(--muted); font-size: .9rem; }
-.row .v { user-select: all; font-weight: 500; }
-.copy { font: inherit; font-size: .85rem; border: 1px solid var(--line); background: transparent; color: var(--ink); padding: .2rem .65rem; border-radius: 6px; cursor: pointer; }
-.copy:hover { border-color: var(--accent); }
-
-footer { font-size: .85rem; color: var(--muted); }
-
-@media (max-width: 560px) {
-  .ledger > li { grid-template-columns: 1fr; gap: .35rem; }
-  .svc > li { grid-template-columns: 1fr; gap: .6rem; }
-  .two { grid-template-columns: 1fr; }
-  .row .k { width: 100%; }
-  .id { flex-direction: column; align-items: flex-start; gap: 1.1rem; }
-  .photo { width: 104px; height: 104px; }
-}
-
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.bar { max-width: 46rem; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: .75rem; }
-.home { display: block; line-height: 0; }
-.top .logo { width: 128px; }
-.top ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 1.25rem; }
-.top ul a { color: var(--ink); text-decoration: none; font-family: var(--display); font-weight: 500; font-size: .92rem; }
-.top ul a:hover { color: var(--accent-ink); }
-.top ul a.cta { background: var(--logo-ink); color: var(--bg); padding: .45rem .9rem; border-radius: 999px; }
-.top ul a.cta:hover { color: var(--bg); background: var(--accent-ink); }
-section, #contact { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 4.5rem); }
-@media (max-width: 480px) {
-  .top .logo { width: 104px; }
-  .top ul { gap: .9rem; }
-  .top ul a { font-size: .85rem; }
-  .top ul a.cta { padding: .4rem .75rem; }
-  .wrap { padding-block: 2rem 3rem; gap: 2.75rem; }
-}
-</style>
-<style>body{margin:0} img{max-width:100%}</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav class="top" aria-label="Main">
   <div class="bar">
-    <a class="home" href="#top" aria-label="Unleash Consult, top of page"><svg class="logo" role="img" aria-label="Unleash Consult" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1117.87 305.71"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="lg-ink" d="M222,148.32V55.86h44.58V139c0,15.41,6.88,23.94,21.19,23.94,15.41,0,24.77-11.56,24.77-28.34V55.86h44.85V196.74H314.49V179.41h-.83c-10.18,13.76-22.56,21.47-42.1,21.47C239.1,200.88,222,179.69,222,148.32Z"/><path class="lg-ink" d="M312.57,55.86h43.2V75.12h.83C367.05,60,380.54,51.73,400.07,51.73c30.83,0,49,22,49,53.39v91.62H404.2V114.2c0-14.87-7.43-25-22-25-14.86,0-24.77,12.38-24.77,29.73v77.86H312.57Z"/><path class="lg-ink" d="M469.67,0h45.41V196.74H469.67Z"/><path class="lg-ink" d="M530.48,126c0-42.11,29.44-74.3,72.37-74.3,20.09,0,36,6.61,48.16,17.61,16.78,15.41,25,39.9,24.76,68.52H574.51c2.75,19,13.21,30.82,31.65,30.82,11.82,0,19.53-5.23,23.38-14H673.3c-3,12.65-11.29,24.76-23.67,33.29-11.83,8.26-26.14,12.94-44,12.94C559.1,200.88,530.48,168.68,530.48,126Zm99.89-14.86c-1.65-16.79-12.11-27.51-26.69-27.51-17.06,0-25.87,10.72-28.89,27.51Z"/><path class="lg-ink" d="M684.29,157.4c0-31.1,24.77-40.45,53.93-44.31,26.42-3.3,35.78-6,35.78-15.68,0-9.08-5.78-15.13-19.26-15.13-14.32,0-21.47,6.32-22.84,18.16H690.62C691.72,74.3,711.81,52,754.46,52c21.18,0,35.5,3.86,45.67,11.56,12.11,8.81,17.9,22.57,17.9,40.18v71c0,11.29,1.09,17.61,4.94,20.09v1.92H779.5c-2.21-3-3.58-8.53-4.68-15.68h-.55c-8.25,11.83-20.64,19.27-41.83,19.27C704.38,200.33,684.29,185.19,684.29,157.4Zm90.8-11V129.6c-5.77,3-14,5.23-23.11,7.44-17.34,3.85-24.49,8.25-24.49,19,0,11.28,8.26,15.69,19.26,15.69C763.54,171.71,775.09,161.52,775.09,146.39Z"/><path class="lg-ink" d="M831.21,151.06h42.38c1.65,14,11,20.92,25.87,20.92,13.48,0,22-4.95,22-14,0-12.66-17.06-14-35.77-17.34-24.49-4.12-50.63-10.73-50.63-43.75,0-29.72,27.51-45.13,60.81-45.13,39.9,0,61.37,17.34,63.57,45.13H918.17C916.51,84.2,908,80.35,895.61,80.35c-11,0-19.55,4.12-19.55,12.93,0,9.91,16,11.28,33.85,14.59,24.77,4.12,53.94,10.45,53.94,46.5,0,30.82-27.24,46.78-64.12,46.78C858.45,201.15,832.59,182.16,831.21,151.06Z"/><path class="lg-ink" d="M978.42,0h44.85V73.2h.83c10.18-13.49,22.29-21.47,41.82-21.47,30.82,0,49,22,49,53.39v91.62h-44.85V114.2c0-14.87-7.43-25-22-25-14.86,0-24.77,12.38-24.77,29.73v77.86H978.42Z"/><text class="lg-ink lg-txt" x="1113.5" y="279.16" text-anchor="end">consult</text><path class="lg-green" d="M149.38,81.6A14.11,14.11,0,0,1,125,91.27,55.44,55.44,0,0,0,84.2,73.63a56,56,0,1,0,0,112A55.48,55.48,0,0,0,125,167.94a14.11,14.11,0,1,1,20.56,19.32,84.24,84.24,0,1,1,0-115.32A14.06,14.06,0,0,1,149.38,81.6Z"/><circle class="lg-green" cx="85.28" cy="129.6" r="33.4"/><circle class="lg-green" cx="160.69" cy="129.6" r="23.49"/></g></g></svg></a>
+    <a class="home" href="./" aria-label="Unleash Consult, top of page"><svg class="logo" role="img" aria-label="Unleash Consult" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1117.87 305.71"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="lg-ink" d="M222,148.32V55.86h44.58V139c0,15.41,6.88,23.94,21.19,23.94,15.41,0,24.77-11.56,24.77-28.34V55.86h44.85V196.74H314.49V179.41h-.83c-10.18,13.76-22.56,21.47-42.1,21.47C239.1,200.88,222,179.69,222,148.32Z"/><path class="lg-ink" d="M312.57,55.86h43.2V75.12h.83C367.05,60,380.54,51.73,400.07,51.73c30.83,0,49,22,49,53.39v91.62H404.2V114.2c0-14.87-7.43-25-22-25-14.86,0-24.77,12.38-24.77,29.73v77.86H312.57Z"/><path class="lg-ink" d="M469.67,0h45.41V196.74H469.67Z"/><path class="lg-ink" d="M530.48,126c0-42.11,29.44-74.3,72.37-74.3,20.09,0,36,6.61,48.16,17.61,16.78,15.41,25,39.9,24.76,68.52H574.51c2.75,19,13.21,30.82,31.65,30.82,11.82,0,19.53-5.23,23.38-14H673.3c-3,12.65-11.29,24.76-23.67,33.29-11.83,8.26-26.14,12.94-44,12.94C559.1,200.88,530.48,168.68,530.48,126Zm99.89-14.86c-1.65-16.79-12.11-27.51-26.69-27.51-17.06,0-25.87,10.72-28.89,27.51Z"/><path class="lg-ink" d="M684.29,157.4c0-31.1,24.77-40.45,53.93-44.31,26.42-3.3,35.78-6,35.78-15.68,0-9.08-5.78-15.13-19.26-15.13-14.32,0-21.47,6.32-22.84,18.16H690.62C691.72,74.3,711.81,52,754.46,52c21.18,0,35.5,3.86,45.67,11.56,12.11,8.81,17.9,22.57,17.9,40.18v71c0,11.29,1.09,17.61,4.94,20.09v1.92H779.5c-2.21-3-3.58-8.53-4.68-15.68h-.55c-8.25,11.83-20.64,19.27-41.83,19.27C704.38,200.33,684.29,185.19,684.29,157.4Zm90.8-11V129.6c-5.77,3-14,5.23-23.11,7.44-17.34,3.85-24.49,8.25-24.49,19,0,11.28,8.26,15.69,19.26,15.69C763.54,171.71,775.09,161.52,775.09,146.39Z"/><path class="lg-ink" d="M831.21,151.06h42.38c1.65,14,11,20.92,25.87,20.92,13.48,0,22-4.95,22-14,0-12.66-17.06-14-35.77-17.34-24.49-4.12-50.63-10.73-50.63-43.75,0-29.72,27.51-45.13,60.81-45.13,39.9,0,61.37,17.34,63.57,45.13H918.17C916.51,84.2,908,80.35,895.61,80.35c-11,0-19.55,4.12-19.55,12.93,0,9.91,16,11.28,33.85,14.59,24.77,4.12,53.94,10.45,53.94,46.5,0,30.82-27.24,46.78-64.12,46.78C858.45,201.15,832.59,182.16,831.21,151.06Z"/><path class="lg-ink" d="M978.42,0h44.85V73.2h.83c10.18-13.49,22.29-21.47,41.82-21.47,30.82,0,49,22,49,53.39v91.62h-44.85V114.2c0-14.87-7.43-25-22-25-14.86,0-24.77,12.38-24.77,29.73v77.86H978.42Z"/><text class="lg-ink lg-txt" x="1113.5" y="279.16" text-anchor="end">consult</text><path class="lg-green" d="M149.38,81.6A14.11,14.11,0,0,1,125,91.27,55.44,55.44,0,0,0,84.2,73.63a56,56,0,1,0,0,112A55.48,55.48,0,0,0,125,167.94a14.11,14.11,0,1,1,20.56,19.32,84.24,84.24,0,1,1,0-115.32A14.06,14.06,0,0,1,149.38,81.6Z"/><circle class="lg-green" cx="85.28" cy="129.6" r="33.4"/><circle class="lg-green" cx="160.69" cy="129.6" r="23.49"/></g></g></svg></a>
     <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#experience">Experience</a></li>
+      <li><a href="./#services">Services</a></li>
+      <li><a href="experience.html">Experience</a></li>
       <li><a class="cta" href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
 <div class="wrap" id="top">
+
 
   <header>
     <div class="id">
@@ -168,6 +41,7 @@ section, #contact { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 4.5r
     </div>
     <p class="where">Independent since 2018 · Based in Fredericia · Working across Denmark, remote or hybrid</p>
   </header>
+
 
   <section id="services">
     <div class="label">How I can help</div>
@@ -196,76 +70,7 @@ section, #contact { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 4.5r
     </ul>
   </section>
 
-  <section id="experience">
-    <div class="label">Client engagements</div>
-    <ol class="ledger">
-      <li>
-        <div class="when">2026</div>
-        <div class="job">
-          <h3>Project Manager &amp; Application Owner <span>· Abena Data</span></h3>
-          <p>Led the IT delivery for a business-critical e-commerce platform, where continued development and daily operations ran side by side.</p>
-          <ul>
-            <li>Coordinated four teams across parallel tracks: development, architecture, integration and data, plus an external development partner</li>
-            <li>Owned dependencies, risks and issues, and maintained one shared status picture for teams and management</li>
-            <li>Led the delivery into an international market launch</li>
-            <li>Built test management ahead of test start, with acceptance criteria agreed with the business</li>
-            <li>Established the governance model: roles, responsibilities, decision forums and escalation paths</li>
-            <li>Moved the platform from project delivery into stable operation and handed it over to the permanent support organisation</li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div class="when">2023 – 2025</div>
-        <div class="job">
-          <h3>Project Manager, API Integrations &amp; Data Governance <span>· Plytix</span></h3>
-          <p>Led the implementation of an attribution tool built on API integrations between CRM and other data sources, from requirements through integration to running use. Established data governance and documentation for integrations across systems.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when">2022</div>
-        <div class="job">
-          <h3>Project Manager, Global PSP Selection <span>· Abena</span></h3>
-          <p>Led the selection of a new global Payment Service Provider for the group's webshops, delivered as a recommendation and implementation roadmap. Steering committee member; planned the technical integration towards the group's enterprise ERP landscape.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when">2021 – 2022</div>
-        <div class="job">
-          <h3>Project Manager, E-commerce &amp; Market Launch <span>· Konges Sløjd</span></h3>
-          <p>Led the launch of eight localised webshops on new markets, from requirements to go-live, on Shopify with ERP as the counterpart. Selected and managed the development agency and the translation agency, carrying learnings from one market into the next.</p>
-        </div>
-      </li>
-      <li>
-        <div class="when">2019 – 2021</div>
-        <div class="job">
-          <h3>Project Manager, E-commerce, ERP &amp; PIM Integration <span>· B Company</span></h3>
-          <p>Led the replatforming of the webshop to Magento with close integration to the existing ERP and a new PIM system. Worked with an external development partner throughout and owned risk management with full transparency to management.</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <section class="earlier">
-    <div class="label">Before going independent</div>
-    <p><b>Planday</b> · Head of Paid Digital Media, 2015 – 2017. Budget, measurement and performance reporting across six markets.</p>
-    <p><b>Google</b> · Dublin and Copenhagen, 2010 – 2015. Advisory and analysis for enterprise clients, presented at C-level.</p>
-  </section>
-
-  <section class="two">
-    <div>
-      <div class="label">Certification</div>
-      <ul>
-        <li>Professional Scrum Master I<span>Scrum.org</span></li>
-      </ul>
-    </div>
-    <div>
-      <div class="label">Education</div>
-      <ul>
-        <li>Project Management with AI<span>IBA Kolding, 2026</span></li>
-        <li>MSc International Marketing &amp; Management<span>Copenhagen Business School</span></li>
-      </ul>
-    </div>
-  </section>
+  <p class="more"><a href="experience.html">See client engagements →</a></p>
 
   <section class="contact" id="contact">
     <h2>Contact</h2>
