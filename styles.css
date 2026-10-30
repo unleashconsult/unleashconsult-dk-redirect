@@ -71,6 +71,8 @@ header h1 { font-size: clamp(2rem, 6vw, 2.9rem); font-weight: 700; letter-spacin
 .svc > li { display: grid; grid-template-columns: 13rem 1fr; gap: 1.5rem; padding-block: 1.6rem; border-top: 1px solid var(--line); }
 .svc > li:last-child { border-bottom: 1px solid var(--line); }
 .svc h2 { font-size: 1.3rem; font-weight: 600; line-height: 1.25; }
+.svc-head { display: grid; gap: .7rem; align-content: start; }
+.svc-icon { width: 36px; height: 36px; color: var(--accent-ink); }
 .svc-body { display: grid; gap: .8rem; min-width: 0; }
 .svc .tags { font-size: .92rem; font-weight: 600; color: var(--muted); }
 
@@ -105,6 +107,8 @@ footer { font-size: .85rem; color: var(--muted); }
 @media (max-width: 560px) {
   .ledger > li { grid-template-columns: 1fr; gap: .35rem; }
   .svc > li { grid-template-columns: 1fr; gap: .6rem; }
+  .svc-head { display: flex; align-items: center; gap: .75rem; }
+  .svc-icon { width: 30px; height: 30px; flex: none; }
   .two { grid-template-columns: 1fr; }
   .row .k { width: 100%; }
   .id { gap: 1rem; }
