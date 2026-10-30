@@ -57,6 +57,9 @@ header h1 { font-size: clamp(2rem, 6vw, 2.9rem); font-weight: 700; letter-spacin
 .links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; color: var(--ink); }
 .clients .label { margin-bottom: .35rem; }
 .clients p { font-weight: 600; }
+.clients a { color: var(--ink); display: inline-block; padding-block: .35rem; }
+.clients a:hover { color: var(--accent-ink); }
+.ledger > li[id] { scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 4.5rem); }
 .where { font-size: .95rem; color: var(--muted); }
 
 .label { font-family: var(--display); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
