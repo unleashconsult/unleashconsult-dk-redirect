@@ -159,3 +159,5 @@ body{margin:0} img{max-width:100%}
 }
 .pm-note { margin-top: 1.2rem; font-size: .98rem; color: var(--muted); }
 .pm-note a { font-family: var(--display); font-weight: 500; }
+.svc .case { font-size: .95rem; padding-left: .9rem; border-left: 3px solid var(--accent-ink); display: grid; gap: .25rem; }
+.svc .case span { font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
