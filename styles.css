@@ -235,3 +235,19 @@ header .where { margin-top: -.6rem; }
 }
 @media (min-width: 900px) { .frontpage .svc h2 { min-height: 2.5em; } }
 @media (max-width: 899px) { .frontpage .svc-head { margin-bottom: .9rem; } }
+
+/* Client cases page */
+.story-group { display: grid; gap: 1.25rem; }
+.story { padding: 1.6rem 1.75rem; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 1px 2px rgba(15,42,58,.04), 0 10px 28px rgba(15,42,58,.06); scroll-margin-top: calc(env(safe-area-inset-top, 0px) + 5rem); }
+.story h3 { margin: 0; font-family: var(--display); font-size: 1.3rem; font-weight: 600; }
+.story-meta { margin: .2rem 0 1rem; font-size: .92rem; color: var(--muted); }
+.story p + p { margin-top: .8rem; }
+.story p:last-child { padding-top: .8rem; border-top: 1px dashed var(--line); font-weight: 500; }
+.story-group .label { font-size: .95rem; color: var(--accent-ink); }
+@media (max-width: 560px) { .story { padding: 1.25rem; } }
+/* Nav: on phones the logo links home, so Services is dropped */
+@media (max-width: 520px) { .top .nav-services { display: none; } }
+.top ul a { white-space: nowrap; }
+@media (max-width: 420px) { .top ul { gap: .55rem; } .top ul a { font-size: .8rem; } .top ul a.cta { padding: .38rem .65rem; } }
+@media (max-width: 420px) { .bar { gap: .4rem; } .top .logo { width: 78px; } .top ul { gap: .45rem; } .top ul a { font-size: .78rem; } .top ul a.cta { padding: .35rem .6rem; } .top ul a.lang { padding: .2rem .4rem; font-size: .7rem; } }
+@media (max-width: 360px) { .top .logo { width: 66px; } .top ul { gap: .35rem; } .top ul a { font-size: .74rem; } }
