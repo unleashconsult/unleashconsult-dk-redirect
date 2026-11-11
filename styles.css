@@ -199,10 +199,6 @@ header .where { margin-top: -.6rem; }
 .bar { max-width: 70rem; }
 .frontpage .wrap { max-width: 70rem; }
 @media (min-width: 900px) {
-  .frontpage header { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); column-gap: 4rem; row-gap: 1.1rem; align-items: center; }
-  .frontpage header .id { grid-row: 1 / span 4; }
-  .frontpage header > :not(.id) { grid-column: 2; }
-  .frontpage .lede-one { font-size: 2rem; line-height: 1.25; max-width: 22ch; }
   .frontpage .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .frontpage .svc > li { display: flex; flex-direction: column; }
   .frontpage .svc-body { flex: 1; display: flex; flex-direction: column; gap: .9rem; }
@@ -210,3 +206,32 @@ header .where { margin-top: -.6rem; }
   .frontpage .pill { margin-left: 0; }
   .frontpage .contact { max-width: 46rem; }
 }
+
+/* Hero: one column, one dominant line */
+.frontpage header { gap: 1.4rem; padding-block: 1.5rem .5rem; }
+.frontpage .photo { width: 64px; height: 64px; }
+.frontpage header h1 { font-size: 1.35rem; }
+.frontpage .role { font-size: .98rem; }
+.frontpage .lede-one { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.12; letter-spacing: -.02em; max-width: 18ch; font-weight: 600; }
+/* Cards: icon always above title */
+.frontpage .svc-head { flex-direction: column; align-items: flex-start; gap: .8rem; }
+/* More air */
+.frontpage .hl { white-space: nowrap; }
+.frontpage header { gap: 0; padding-block: 3rem 1rem; }
+.frontpage header .id { margin-bottom: 2.2rem; }
+.frontpage header .actions { margin-top: 2.2rem; }
+.frontpage header .meta { margin-top: 1.6rem; }
+.frontpage .svc-head { margin-bottom: .4rem; }
+.frontpage .svc-body { gap: 1.2rem; }
+.frontpage .svc > li, .frontpage .svc > li:last-child { padding: 1.9rem; }
+.frontpage .flow .label, .frontpage #services .label, .frontpage #how .label { margin-bottom: 1.4rem; }
+@media (min-width: 900px) {
+  .frontpage .wrap { gap: 6.5rem; padding-block: 3rem 6rem; }
+  .frontpage .svc { gap: 1.5rem; }
+}
+@media (max-width: 899px) {
+  .frontpage .wrap { gap: 4rem; }
+  .frontpage header { padding-block: 1.5rem .5rem; }
+}
+@media (min-width: 900px) { .frontpage .svc h2 { min-height: 2.5em; } }
+@media (max-width: 899px) { .frontpage .svc-head { margin-bottom: .9rem; } }
